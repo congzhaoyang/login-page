@@ -13,3 +13,87 @@
 .button {
     margin: 4px;
 }
+
+.ui.compact.message {
+    display: block;
+    text-align: center;
+}
+
+.pied-piper-logo {
+    width: 211px;
+} 
+
+.btns {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.btns span {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    line-height: 18px;
+    margin: 6px auto 2px;
+}
+
+form {
+    height: 174px;
+}
+
+.form-sign-up {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form-sign-up.disabled {
+    display: none;
+}
+
+.form-log-in {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-log-in.disabled {
+    display: none;
+}
+
+.submit-and-log-out-btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-around; 
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper .container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 2px 30px 10px #EAECF0;
+}
+
+.wrapper > .left {
+
+}
+
+.wrapper .right {
+    width: 682.67px;
+    height: 451px;
+    background: url("../cover.jpg") no-repeat;
+    background-size: cover;
+    display: inline-block;
+    color: white;
+    text-align: center;
+}

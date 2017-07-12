@@ -4,55 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>loginAndSignUpPage</title>
     <link rel="stylesheet" type="text/css" href="./static/semantic/semantic/dist/semantic.min.css">
     <link rel="stylesheet" href="./css/main.css">
-
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous"></script>
     <script src="./static/semantic/semantic/dist/semantic.min.js"></script>
 </head>
 <body>
-    <div class="ui compact message">
-    <p>您好: <span id="current-user"></span></p>
+    <div class="wrapper">
+        <div class="container">
+            <section class="left">
+                <div class="logo-and-message-container">
+                    <img class="pied-piper-logo" src="./pied-piper.jpg" alt="">
+                    <div class="ui compact message">
+                        <p>您好: <span id="current-user"></span></p>
+                    </div>
+                </div>
+                <div class="btns">
+                    <span id="log-in-btn">登录</span>
+                    <span id="sign-up-btn">注册</span>    
+                </div>           
+            
+                <form class="form-sign-up disabled" name="sign-up">
+                    <div class="ui left icon input">
+                        <input type="text" name=username placeholder="用户名">
+                        <i class="user icon"></i>
+                    </div>
+                    <div class="ui left icon input">
+                        <input type="email" name=email placeholder="邮箱">    
+                        <i class="mail square icon"></i>
+                    </div>
+                    <div class="ui left icon input">
+                        <input type="password" name=password placeholder="密码">    
+                        <i class="lock icon"></i>
+                    </div>
+                    <button class="ui button" type="submit">注册 </button>
+                </form>
+                <form class="form-log-in" name="log-in">
+                    <div class="ui left icon input">
+                        <input type="text" name=username placeholder="用户名">
+                        <i class="user icon"></i>
+                    </div>
+                    <div class="ui left icon input">
+                        <input type="password" name=password placeholder="密码">
+                        <i class="lock icon"></i>
+                    </div>
+                    <div class="submit-and-log-out-btns">
+                        <button class="ui button" type="submit">登录 </button>
+                        <button class="ui button" id="log-out" type="submit">登出 </button>      
+                    </div>
+                </form>
+            </section>
+            <section class="right">
+            </section>
+        </div>
     </div>
-    <h1>注册</h1>
-    <form name="signUp">
-        <div class="ui left icon input">
-            <input type="text" name=username placeholder="用户名">
-            <i class="user icon"></i>
-        </div>
-        <br>
-        <div class="ui left icon input">
-            <input type="email" name=email placeholder="邮箱">    
-            <i class="mail square icon"></i>
-        </div>
-        <br>
-        <div class="ui left icon input">
-            <input type="password" name=password placeholder="密码">    
-            <i class="lock icon"></i>
-        </div>
-        <br>
-        <button class="ui button" type="submit">注册 </button>
-    </form>
-
-    <h1>登录</h1>
-    <form name="log-in">
-        <div class="ui left icon input">
-            <input type="text" name=username placeholder="用户名">
-            <i class="user icon"></i>
-        </div>
-        <br>
-        <div class="ui left icon input">
-            <input type="password" name=password placeholder="密码">
-            <i class="lock icon"></i>
-        </div>
-        <br>
-        <button class="ui button" type="submit">登录 </button>
-    </form>
-    <br>
-    <button class="ui button" id="log-out" type="submit">登出 </button>
     <script src="./node_modules/leancloud-storage/dist/av.js"></script>
     <script src="./index.js"></script>
 </body>

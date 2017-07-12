@@ -7,7 +7,7 @@ AV.init({
 });
 
 //注册功能
-let signUpForm = document.querySelector('form[name=signUp]');
+let signUpForm = document.querySelector('form[name=sign-up]');
 console.log(signUpForm);
 signUpForm.addEventListener('submit', (event)=>{
     event.preventDefault();
@@ -32,9 +32,11 @@ var currentUser = AV.User.current();
 console.log("currentuser"+currentUser);
 if (currentUser) {
     document.getElementById('current-user').innerText = currentUser.attributes.username;
+    console.log(currentUser.attributes.username);
 }
 else {
     document.getElementById('current-user').innerText = "游客";
+    console.log("游客")
 }
 
 //登出功能
@@ -66,4 +68,19 @@ logInForm.addEventListener('submit', (event)=> {
                 alert("用户名不存在");
         }
     });
+})
+
+$(function() {
+    console.log("hello");
+    $("#sign-up-btn").click(function() {
+        console.log("click");
+        $(".form-log-in").addClass("disabled");
+        $(".form-sign-up").removeClass("disabled");
+    })
+    $("#log-in-btn").click(function() {
+        console.log("click");
+        $(".form-log-in").removeClass("disabled");
+        $(".form-sign-up").addClass("disabled");
+
+    })  
 })
