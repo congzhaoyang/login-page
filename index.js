@@ -82,6 +82,5 @@ $(function() {
         console.log("click");
         $(".form-log-in").removeClass("disabled");
         $(".form-sign-up").addClass("disabled");
-
     })  
 })

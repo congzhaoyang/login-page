@@ -4,3 +4,5 @@
 [点击预览和体验](https://congzhaoyang.github.io/login-page/index.html)
 
 可以使用注册功能，如果不想注册也可以使用账号“123”，密码“123”登录。
+
+注： nodo_moudules中的文件在git add过程中可能被忽略，可以使用`git add -f`命令强行添加。
